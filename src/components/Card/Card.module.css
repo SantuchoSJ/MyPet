@@ -10,7 +10,10 @@
      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
-
+.profile{
+    border-radius: 100px;
+    max-width: 50px;
+}
 .owner{
 
     height: 200px;

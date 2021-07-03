@@ -38,6 +38,7 @@ export default ({owner, ownerVisible, setOwnerVisible})=>{
         }
       >
           <div className={s.container}>
+        <img src={user?.picture}/>
         <h2 className={s.title}>{user?.firstName} {user?.lastName}</h2>
         <div className={s.text}>{user?.email}</div>
         <div className={s.text}>Gender: {user?.gender}</div>
