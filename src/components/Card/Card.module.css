@@ -1,0 +1,48 @@
+.container{
+    border-style:solid;
+     margin-bottom: 60px;
+     width:500px;
+     height:600px;
+     display:flex;
+     flex-direction:column;
+     justify-content: center;
+     align-items:center;
+     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.owner{
+
+    height: 200px;
+    width: 200px;
+    text-align:center;
+    font-weight:bold;
+    font-size:30px
+}
+
+.text{
+
+    height: 200px;
+    font-size:20px
+}
+
+.image{
+    max-width: 300px;
+    max-height:300px
+}
+
+.likesAndComments{
+
+    color: blue;
+    
+}
+
+.tags{
+    background-color:gray;
+    width:90px;
+    text-align: center;
+    margin: 2px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
+    margin-bottom: 7px;
+}
