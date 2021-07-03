@@ -9,8 +9,13 @@ export default ()=>{
     const dispatch = useDispatch();
     const posts = useSelector(state=> state.posts)
     const [isLoading, setIsLoading] = useState(true)
+    const [asyncTask, setAsyncTask] = useState(true)
     useEffect(()=>{
-        dispatch(getPosts()).then(()=>setIsLoading(false))
+        dispatch(getPosts()).then(()=>{
+          if(asyncTask) setIsLoading(false)
+          })
+
+        return ()=> setAsyncTask(false)
       }, [dispatch])
     
     

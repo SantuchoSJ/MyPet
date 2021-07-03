@@ -8,6 +8,7 @@ import {getTagPosts} from "../../state/posts/thunks"
 import {useHistory} from "react-router-dom"
 import {useDispatch} from "react-redux"
 import Loader from "react-loader-spinner";
+import APP_ID from "../../utils/APIConfig"
 
 export default ({post})=>{
     const dispatch = useDispatch();
@@ -16,20 +17,25 @@ export default ({post})=>{
     const [commentsVisible, setCommentsVisible] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
     const history = useHistory()
+    const [asyncTask, setIsAsyncTask] = useState(true)
 
     const fetchTagPosts = (tag)=>{
         setIsLoading(true)
         dispatch(getTagPosts(tag)).then(()=>{
+          if(asyncTask)
             setIsLoading(false)
             history.push(`/posts/${tag}`)
         })
     }
 
     useEffect(()=>{
-        axios.get(`${BASE_URL}/post/${post.id}/comment`, { headers: { 'app-id': '60e0a89bcd0cf914675ef8ab' } })
-            .then((res)=>setPostComments(res.data)
-            )
+        axios.get(`${BASE_URL}/post/${post.id}/comment`, { headers: { 'app-id': '60e0af19079048244b4eb452' } })
+            .then((res)=>{
+              if(asyncTask)setPostComments(res.data)
+            })
             .catch((err)=>console.log(err))
+
+        return ()=> setIsAsyncTask(false)
     }, [])
    
     if(isLoading)return <Loader

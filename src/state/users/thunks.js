@@ -5,7 +5,7 @@ import APP_ID from "../../utils/APIConfig"
 
 
 export const getUser = createAsyncThunk("GET_USER", (userId)=>{
-    return  axios.get(`${BASE_URL}/user/${userId}`, { headers: { 'app-id': '60e0a89bcd0cf914675ef8ab' } })
+    return  axios.get(`${BASE_URL}/user/${userId}`, { headers: { 'app-id': '60e0af19079048244b4eb452' } })
         .then((res)=> res.data)
         .catch((err)=>console.log(err))
 })

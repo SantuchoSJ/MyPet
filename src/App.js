@@ -27,7 +27,7 @@ function App() {
     <>
     <Header/>
     <Switch>
-      {routes.map((route)=> <Route exact key={route.key} path={route.path} component={route.component} />)}
+      {routes.map((route)=> <Route exact key={route.key} path={route.path} render={({match}) => <route.component match={match}/>} />)}
       <Redirect to="/posts"/>
     </Switch>
     </>
