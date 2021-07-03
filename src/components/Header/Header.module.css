@@ -1,0 +1,19 @@
+.container {
+    z-index: 1;
+    height: 65px;
+    padding: 0 60px;
+    margin-bottom: 30px;
+    background: rgb(156,154,154);
+    background: linear-gradient(0deg, rgba(156,154,154,1) 0%, rgba(107,106,108,1) 100%);
+    box-shadow: -1px 12px 5px 0px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content:space-between;
+    align-items:center
+  }
+
+  .text{
+      font-size: 35px;
+      color: white;
+      font-weight:bold;
+  }
+  

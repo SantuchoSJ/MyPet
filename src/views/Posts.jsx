@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from 'react-redux';
-import Card from "../components/Card/Card"
+import Card from "./Card/Card"
 import { getPosts } from "../state/posts/thunks"
 import Loader from "react-loader-spinner";
 

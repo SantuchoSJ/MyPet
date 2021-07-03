@@ -1,8 +1,8 @@
 import axios from "axios";
 import {useEffect, useState} from "react"
 import BASE_URL from "../../utils/APIConfig"
-import CommentsModal from "../CommentsModal/CommentsModal";
-import OwnerModal from "../OwnerModal/OwnerModal";
+import CommentsModal from "../../components/CommentsModal/CommentsModal";
+import OwnerModal from "../../components/OwnerModal/OwnerModal";
 import s from "./Card.module.css"
 import {getTagPosts} from "../../state/posts/thunks"
 import {useHistory} from "react-router-dom"
